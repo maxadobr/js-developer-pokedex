@@ -1,17 +1,49 @@
+:root, :root[data-theme='light'] {
+    --primary-color: #f1dcdc;
+    --secondary-color: #f8f1f1;
+    --text-color: #06050f;
+    --blend: rgba(255, 255, 255, 0.507);
+    --light: brightness(1.5);
+    --lightfont: brightness(0.0);
+    --bw: black;
+    --border-color: rgba(0, 0, 0, 0.400);
+}
+
+:root[data-theme='dark'] {
+    --primary-color: #443f3f;
+    --secondary-color: #2b2323;
+    --text-color: #f6f6fa;
+    --blend: rgba(0, 0, 0, 0.507);
+    --light: brightness(0.5);
+    --lightfont: brightness(1.5);
+    --bw: light;
+    --border-color: rgba(255, 255, 255, 0.4);
+}
+
 * {
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
+    color: var(--text-color);
 }
 
 body {
-    background-color: #f6f8fc;
+    background-color: var(--secondary-color);
+}
+
+h1 {
+    text-align: center;
+    color: var(--text-color);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
 }
 
 .content {
     width: 100vw;
     height: 100vh;
     padding: 1rem;
-    background-color: #fff;
+    background-color: var(--primary-color);
 }
 
 @media screen and (min-width: 992px) {
